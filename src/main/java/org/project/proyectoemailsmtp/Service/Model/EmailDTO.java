@@ -4,7 +4,7 @@ public class EmailDTO {
 
     private String destinatario;
     private String asunto;
-    private String getDestinatario;
+    private String Message;
 
     public String getDestinatario() {
         return destinatario;
@@ -22,11 +22,11 @@ public class EmailDTO {
         this.asunto = asunto;
     }
 
-    public String getGetDestinatario() {
-        return getDestinatario;
+    public String getMessage() {
+        return Message;
     }
 
-    public void setGetDestinatario(String getDestinatario) {
-        this.getDestinatario = getDestinatario;
+    public void setMessage(String message) {
+        Message = message;
     }
 }
