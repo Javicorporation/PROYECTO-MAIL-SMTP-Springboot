@@ -24,15 +24,22 @@ public class EmailServiceImpl implements IEmailService {
 
     @Override
     public void sendMail(EmailDTO email) throws MessagingException {
-        MimeMessage message = javaMailSender.createMimeMessage();
-        MimeMessageHelper helper = new MimeMessageHelper(message, true,"UTF-8");
+        try {
+            MimeMessage message = javaMailSender.createMimeMessage();
+            MimeMessageHelper helper = new MimeMessageHelper(message, true,"UTF-8");
 
-        helper.setTo(email.getDestinatario());
-        helper.setSubject(email.getAsunto());
+            helper.setTo(email.getDestinatario());
+            helper.setSubject(email.getAsunto());
 
-        Context context = new Context();
-        context.setVariable("message", email.getMessage());
-        String contenidoHtml = templateEngine.process("Email", context);
+            Context context = new Context();
+            context.setVariable("message", email.getMessage());
+            String contenidoHtml = templateEngine.process("Email", context);
+            helper.setText(contenidoHtml,true);
+            javaMailSender.send(message);
+        }catch (Exception e){
+            throw new RuntimeException("se produjo un error al enviar un mensaje"+ e.getMessage(),e);
+        }
+
 
 
 
