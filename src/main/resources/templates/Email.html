@@ -1,15 +1,96 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en", xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>correo de prueba</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Oops! Parece que hubo un pequeño contratiempo...</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #cc7979;
+            text-align: center;
+            padding: 20px;
+            background-image: url('https://i.pinimg.com/564x/fa/cc/d4/faccd47dfe976c8d9469e2c8e3d91840.jpg');
+            background-size: cover;
+        }
+        h1 {
+            color: #020202;
+        }
+        p {
+            color: #000000;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        .notice {
+            background-color: rgba(197, 31, 31, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cat-img {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            opacity: 0.2;
+            z-index: -1;
+        }
+        .poem {
+            background-color: rgba(189, 111, 111, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
-<h1 style="color: #47a6ff">hola</h1>
-<p style="color: black" th:text="${mensaje}"></p>
+<h1 class="poem">¡Zas! ¡Parece que te perdiste la fiesta en el Club de los Tesoros!</h1>
+<p style="color: black" th:text="${mensaje}" ></p>
+<p style="color: black" class="poem">¡Hola, carnavalero!</p>
+<p style="color: black" class="poem">POEMA 20</p>
+<p style="color: black" class="poem"> Pablo Neruda</p>
 
+<div class="poem">
+    <p>Puedo escribir los versos más tristes esta noche.</p>
+    <p>Escribir, por ejemplo: «La noche está estrellada,</p>
+    <p>y tiritan, azules, los astros, a lo lejos».</p>
+    <p>El viento de la noche gira en el cielo y canta.</p>
+    <p>Puedo escribir los versos más tristes esta noche.</p>
+    <p>Yo la quise, y a veces ella también me quiso.</p>
+    <p>En las noches como ésta la tuve entre mis brazos.</p>
+    <p>La besé tantas veces bajo el cielo infinito.</p>
+    <p>Ella me quiso, a veces yo también la quería.</p>
+    <p>Cómo no haber amado sus grandes ojos fijos.</p>
+    <p>Puedo escribir los versos más tristes esta noche.</p>
+    <p>Pensar que no la tengo. Sentir que la he perdido.</p>
+    <p>Oír la noche inmensa, más inmensa sin ella.</p>
+    <p>Y el verso cae al alma como al pasto el rocío.</p>
+    <p>Qué importa que mi amor no pudiera guardarla.</p>
+    <p>La noche está estrellada y ella no está conmigo.</p>
+    <p>Eso es todo. A lo lejos alguien canta. A lo lejos</p>
+    <p>Mi alma no se contenta con haberla perdido.</p>
+    <p>Como para acercarla mi mirada la busca.</p>
+    <p>Mi corazón la busca, y ella no está conmigo.</p>
+    <p>La misma noche que hace blanquear los mismos árboles.</p>
+    <p>Nosotros, los de entonces, ya no somos los mismos.</p>
+    <p>Ya no la quiero, es cierto, pero cuánto la quise.</p>
+    <p>Mi voz buscaba el viento para tocar su oído.</p>
+    <p>De otro. Será de otro. Como antes de mis besos.</p>
+    <p>Su voz, su cuerpo claro. Sus ojos infinitos.</p>
+    <p>Ya no la quiero, es cierto, pero tal vez la quiero.</p>
+    <p>Es tan corto el amor, y es tan largo el olvido.</p>
+    <p>Porque en noches como ésta la tuve entre mis brazos,</p>
+    <p>mi alma no se contenta con haberla perdido.</p>
+    <p>Aunque éste sea el último dolor que ella me causa,</p>
+    <p>y estos sean los últimos versos que yo le escribo.</p>
+</div>
+<img src="https://www.placecage.com/800/600" alt="Gato bailando" class="cat-img">
 </body>
 </html>
+
+
+
